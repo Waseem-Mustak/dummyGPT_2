@@ -115,17 +115,17 @@ start_time = time.time()
 
 torch.manual_seed(123)
 
-# optimizer = torch.optim.AdamW(model.parameters(), lr=5e-5, weight_decay=0.1)
-checkpoint = torch.load("model_and_optimizer.pth")
-# model = GPTModel(GPT_CONFIG_124M)  // model already defined in modifiedModel.py
-model.load_state_dict(checkpoint["model_state_dict"])
-optimizer = torch.optim.AdamW(model.parameters(), lr=5e-4, weight_decay=0.1)
-optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
+optimizer = torch.optim.AdamW(model.parameters(), lr=5e-5, weight_decay=0.1)
+# checkpoint = torch.load("model_and_optimizer.pth")
+# # model = GPTModel(GPT_CONFIG_124M)  // model already defined in modifiedModel.py
+# model.load_state_dict(checkpoint["model_state_dict"])
+# optimizer = torch.optim.AdamW(model.parameters(), lr=5e-4, weight_decay=0.1)
+# optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
 
-num_epochs = 1
+num_epochs = 6
 train_losses, val_losses, train_accs, val_accs, examples_seen = train_classifier_simple(
     model, train_loader, val_loader, optimizer, device,
     num_epochs=num_epochs, eval_freq=50, eval_iter=5,
