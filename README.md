@@ -7,7 +7,7 @@ This spam classifier is based on **GPT-2**, but it wasn't just used as-is. Inste
 2. **Weight Enhancement**: Integrated **OpenAI's pretrained GPT-2 weights** for better generalization.
 3. **Task-Specific Fine-Tuning**: Transformed the language model into a classifier by **adding an extra layer**, **freezing select layers**, and **fine-tuning on SMS spam detection**.
 
-Achieves **97%+ accuracy** with minimal training - [See Test Results](#test-results)
+Achieves **97%+ accuracy** with minimal training
 
 ## 📂 Files & Execution Flow:
 ```text
@@ -21,7 +21,11 @@ fineTune.py   testPrompt.py
 
 ## 🚀 Quick Start
 ### Install requirements (Python 3.8+):
+<<<<<<< HEAD
 Create a virtual environment and install dependencies:
+=======
+create a venv
+>>>>>>> 92e633d0dd7b2b488c92f90b3adad4690daaaa34
 ```bash
 pip install -r requirements.txt
 ```
