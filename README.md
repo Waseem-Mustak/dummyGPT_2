@@ -15,6 +15,7 @@ fineTune.py   testPrompt.py
 
 ## 🚀 Quick Start
 ### Install requirements (Python 3.8+):
+create a venv
 ```bash
 pip install -r requirements.txt
 ```
@@ -38,7 +39,7 @@ python testPrompt.py
 ### Sample Output:
 ```text
 "Claim your $1000 prize now!" → spam (98.7% confidence)
-"See you at the meeting" → ham (99.2% confidence)
+"See you at the meeting" → not spam (99.2% confidence)
 ```
 
 ## 🛠️ Key Components
