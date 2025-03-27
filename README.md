@@ -1,7 +1,13 @@
 # GPT-2 SMS Spam Classifier
 
-**Accurate spam detection using fine-tuned GPT-2**  
-Achieves 97%+ accuracy with minimal training - [See Test Results](#test-results)
+## 🧠 How This Model Was Built
+This spam classifier is based on **GPT-2**, but it wasn't just used as-is. Instead, the model was developed from scratch and trained in **three key steps**:
+
+1. **Custom Pretraining**: Initially trained on a book dataset to enhance text understanding.
+2. **Weight Enhancement**: Integrated **OpenAI's pretrained GPT-2 weights** for better generalization.
+3. **Task-Specific Fine-Tuning**: Transformed the language model into a classifier by **adding an extra layer**, **freezing select layers**, and **fine-tuning on SMS spam detection**.
+
+Achieves **97%+ accuracy** with minimal training - [See Test Results](#test-results)
 
 ## 📂 Files & Execution Flow:
 ```text
@@ -15,6 +21,7 @@ fineTune.py   testPrompt.py
 
 ## 🚀 Quick Start
 ### Install requirements (Python 3.8+):
+Create a virtual environment and install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
@@ -38,7 +45,7 @@ python testPrompt.py
 ### Sample Output:
 ```text
 "Claim your $1000 prize now!" → spam (98.7% confidence)
-"See you at the meeting" → ham (99.2% confidence)
+"See you at the meeting" → not spam (99.2% confidence)
 ```
 
 ## 🛠️ Key Components
