@@ -1,7 +1,7 @@
 # GPT-2 SMS Spam Classifier
 
 ## 🧠 How This Model Was Built
-This spam classifier is based on **GPT-2**, but it wasn't just used as-is. Instead, the model was developed from scratch and trained in **three key steps**:
+This spam classifier is based on **GPT-2**, but it wasn't just used as-is. Instead, the model  was developed from scratch and trained in **three key steps**:
 
 1. **Custom Pretraining**: Initially trained on a book dataset to enhance text understanding.
 2. **Weight Enhancement**: Integrated **OpenAI's pretrained GPT-2 weights** for better generalization.
